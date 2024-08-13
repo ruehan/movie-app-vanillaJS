@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영화 정보 웹사이트</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#" data-category="now_playing">현재 상영중</a>
+        <!-- <a href="#" data-category="popular">인기 영화</a> -->
+        <a href="#" data-category="top_rated">최고 평점</a>
+        <a href="#" data-category="upcoming">개봉 예정</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="영화 검색..." />
+        <button id="searchButton">검색</button>
+      </div>
+
+      <div id="movieGrid" class="movie-grid"></div>
+
+      <div id="loadingIndicator" class="loading-indicator">
+        <div class="spinner"></div>
+        <p>영화 불러오는 중...</p>
+      </div>
+    </main>
+
+    <div id="movieModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modalContent"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
