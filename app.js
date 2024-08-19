@@ -229,7 +229,6 @@ function displayMovieModal(movie) {
               }%;">
                 ${movie.vote_average.toFixed(1)}
               </div>
-              <p>회원 점수</p>
             </div>
             <p class="tagline">"${movie.tagline || ''}"</p>
             <h3>개요</h3>
@@ -268,6 +267,7 @@ function handleSearch() {
 
 // 카테고리 변경 처리
 function handleCategoryChange(event) {
+  console.log(event.target)
   event.preventDefault();
   const newCategory = event.target.dataset.category;
   if (newCategory !== currentCategory) {
