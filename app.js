@@ -151,9 +151,8 @@ function createMovieCard(movie) {
     </div>
     <div class="movie-card-content">
       <h3>${movie.title}</h3>
-      <p class="release-date">${movie.release_date}</p>
       <p class="rating">평점: ${movie.vote_average.toFixed(1)}/10</p>
-      <p class="genres">${movieGenres || "장르 정보 없음"}</p>
+			<p class="release-date">${movie.release_date}</p>
     </div>
   `;
 
@@ -190,7 +189,7 @@ async function fetchAndDisplayMovieDetails(movieId) {
 
 // 영화 모달 표시
 function displayMovieModal(movie, videos) {
-	console.log(videos);
+	console.log(movie);
 	// console.log(movie);
 	const genreNames = movie.genres.map((genre) => genre.name).join(", ");
 
